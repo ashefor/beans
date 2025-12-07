@@ -23,11 +23,9 @@ export class Issue {
   screenshots: string[];
 
   @Column('simple-array')
-  @Index()
   tags: string[];
 
-  @Column({ type: 'varchar', length: 1000, unique: true })
-  @Index()
+  @Column({ type: 'varchar', length: 255, unique: true })
   contentHash: string;
 
   @CreateDateColumn()
